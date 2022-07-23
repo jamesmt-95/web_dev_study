@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GEOIP DB - jQuery example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>Country: <span id="country"></span>
+    <div>State: <span id="state"></span>
+    <div>City: <span id="city"></span>
+    <div>Latitude: <span id="latitude"></span>
+    <div>Longitude: <span id="longitude"></span>
+    <div>IP: <span id="ip"></span>
+    <script>
+        $.ajax({
+            url: "https://geoip-db.com/jsonp",
+            jsonpCallback: "callback",
+            dataType: "jsonp",
+            success: function( location ) {
+                $('#country').html(location.country_name);
+                $('#state').html(location.state);
+                $('#city').html(location.city);
+                $('#latitude').html(location.latitude);
+                $('#longitude').html(location.longitude);
+                $('#ip').html(location.IPv4);  
+            }
+        });     
+    
+
+// function showPosition(){
+//     if(navigator.geolocation){
+//         navigator.geolocation.getCurrentPosition(function(position){
+//             var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+//             document.getElementById("result").innerHTML = positionInfo;
+//         });
+//     } else{
+//         alert("Sorry, your browser does not support HTML5 geolocation.");
+//     }
+// }
+
+</script>
+
+</body>
+</html>
+<!-- https://geoip-db.com/json -->

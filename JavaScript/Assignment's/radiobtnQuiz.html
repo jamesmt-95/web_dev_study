@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Online Quiz JavaScript</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <p class="text-center display-4 text-success"> Online HTML Quiz</p>
+        <div class="card mt-4 bg-light">
+
+            <p class="ml-2" style="font-size:18px;font-weight:bold;" q-field="1">1. What does HTML stand for?</p>
+            <div class="form-check d-block">
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest1" value="0">
+                    Home Tool Markup Language
+                </label>
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest1" value="1">
+                    Hyper Text Markup Language
+                </label>
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest1" value="0">
+                    Hyperlinks and Text Markup Language
+                </label>
+            </div>
+        </div>
+        <div class="card mt-4 bg-light">
+
+            <p class="ml-2" style="font-size:18px;font-weight:bold;" q-field="1">2. Who is making the Web standards?
+            </p>
+            <div class="form-check d-block">
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest2" value="0">
+                    Google
+                </label>
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest2" value="1">
+                    The World Wide Web Consortium
+                </label>
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest2" value="0">
+                    Microsoft
+                </label>
+            </div>
+        </div>
+
+
+        <div class="card mt-4 bg-light">
+
+            <p class="ml-2" style="font-size:18px;font-weight:bold;" q-field="1">3. Choose the correct HTML element for
+                the
+                largest
+                heading: </p>
+            <div class="form-check d-block">
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest3" value="0">
+                    &lt;heading&gt;
+                </label>
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest3" value="1">
+                    &lt;h1&gt;
+                </label>
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest2" value="0">
+                    &lt;h6&gt;
+                </label>
+            </div>
+        </div>
+
+
+
+        <div class="card mt-4 bg-light">
+
+            <p class="ml-2" style="font-size:18px;font-weight:bold;" q-field="1">4. What is the correct HTML element
+                for
+                inserting
+                a line break?</p>
+            <div class="form-check d-block">
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest4" value="1">
+                    &lt;br&gt;
+                </label>
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest4" value="0">
+                    &lt;break&gt;
+                </label>
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest4" value="0">
+                    &lt;bline&gt;
+                </label>
+            </div>
+        </div>
+
+        <div class="card mt-4 bg-light">
+
+            <p class="ml-2" style="font-size:18px;font-weight:bold;" q-field="1">5. What is the correct HTML for adding
+                a
+                background color?</p>
+            <div class="form-check d-block">
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest5" value="1">
+                    &lt;body style="background-color:yellow;"&gt;
+                </label>
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest5" value="0">
+                    &lt;body bg="yellow"&gt;
+                </label>
+                <label class="form-check-label d-block ml-2">
+                    <input type="radio" class="form-check-input" name="quest5" value="0">
+                    &lt;background&gt;yellow&lt;/background&gt;
+                </label>
+            </div>
+        </div>
+
+        <div class="text-center pb-4">
+            <button type="button" id="veriBtn" class="btn btn-primary mt-4">Verify</button>
+        </div>
+        <fieldset class="card p-3 mb-2 mb-4" id="resultDiv">
+            <legend>Your HTML QUIZ Result</legend>
+            <div class="mt-4">
+                <p class="display-4 text-center mt-4" id="totPercnt">
+                    Your Score :
+                </p>
+                <p class="text-center mt-4" id="totQuestions">
+                    Total Questions :
+                </p>
+                <p class="text-center mt-4" id="totAttended">
+                    Total Attended :
+                </p>
+                <p class="text-center mt-4" id="totCorect">
+                    Correct Answers :
+                </p>
+            </div>
+
+        </fieldset>
+    </div>
+
+
+
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $('#resultDiv').hide();
+        // $('#veriBtn').prop('disabled', true);
+
+    });
+
+    // checking all radio is selected, remaining to selected etc..
+    //     $('#veriBtn').click(function() {
+    //     var checked = $("#container :radio:checked");
+    //     var groups = [];
+    //     $("#container :radio").each(function() {
+    //         if (groups.indexOf(this.name) < 0) {
+    //             groups.push(this.name);
+    //         }
+    //     });
+    //     if (groups.length == checked.length) {
+    //         alert('all are checked!');
+    //     }
+    //     else {
+    //         var total = groups.length - checked.length;
+    //         alert(total + ' group(s) are not selected');
+    //     }
+    // });
+    var $countValid = 0;
+    $('input:radio').on('click', function () {
+
+        var $curr_Valid = Number($(this).attr('value'));
+        // alert(typeof curr_Valid);
+        $countValid += $curr_Valid;
+    });
+
+    $('#veriBtn').on('click', function () {
+
+        // alert(countValid);
+        //$("#container :radio:checked"); or $("#container input:radio:checked"); or $("input:radio:");
+        $('input:radio').prop('disabled', true);
+        // var $findspan = $(this).closest('#container').find('input:radio[value=1]').closest('label').css('color', 'green');
+        var $findspan = $(this).closest('#container').find('input:radio[value=1]');
+        $findspan.closest('label').css({
+            'color': 'green',
+            'font-weight': 'bold'
+        });
+        // Total Questions
+        var $tot_Question = $(this).closest('#container').find('p[q-field="1"]').length;
+
+        // Total Attended Questions
+        var $attend_Question = $("#container input:radio:checked").length;
+        // alert("answered ="+$ans_Question +" total ="+$tot_Question);
+
+        // Total Attended & Correct Questions
+        var $attend_correct_Question = $("#container input:radio[value='1']:checked").length;
+
+        // Total Percentage
+        var $percentage = Math.round(($attend_correct_Question / $tot_Question) * 100);
+
+
+        if ($percentage > 75) {
+            $('#totPercnt').append($percentage + '%');
+            $('#totPercnt').addClass('text-success');
+            $('#totPercnt').css({
+                'font-weight': 'bold'
+            });
+        } else {
+            $('#totPercnt').append($percentage + '%');
+            $('#totPercnt').addClass('text-danger');
+        }
+
+        $('#totQuestions').append($tot_Question);
+
+        $('#totAttended').append($attend_Question);
+
+        $('#totCorect').append($attend_correct_Question);
+
+        $('#resultDiv').show();
+
+        //after 1 second will display
+        // setTimeout(function(){
+        //     $('#resultDiv').show();
+        // },1000);
+
+
+        //after 60 second will hide
+        setTimeout(function () {
+            $('#resultDiv').hide();
+        }, 60000);
+
+
+        $('#veriBtn').prop('disabled', true);
+    });
+</script>
+
+</html>

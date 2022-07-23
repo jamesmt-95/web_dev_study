@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular ng-Form Validation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="../project_SouthIndiaBank/public/bootstrap-4.0.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
+</head>
+<body>
+    <div class="container mt-1 mb-4" ng-app="register">
+        <p class="pt-4 text-center display-4" style="font-weight: bold;color: #930000;">
+            Registration Form
+        </p>
+        <div class="mt-4  container card" ng-controller="controlRegister">
+            <form name="registration_Form" novalidate>
+                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                    <div class="col-md-6 col-xs-12">
+                        <label for="input1">First Name</label>
+                        <input ng-model="fname" name="fname" type="text" class="form-control" id="input1" placeholder="Enter your First Name" required>
+                        <small class="text-danger" ng-show="registration_Form.fname.$touched && registration_Form.fname.$invalid || registration_Form.fname.$error.required">Enter a valid First Name</small>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <label for="input2">Second Name</label>
+                        <input type="text" ng-model="lname" name="lname" class="form-control" id="input2" placeholder="Enter your Second Name" required>
+                        <small class="text-danger" ng-show="registration_Form.lname.$touched && registration_Form.lname.$invalid || registration_Form.lname.$error.required">Enter a valid Second Name</small>
+                    </div>
+                </div>
+                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                    <div class="col-md-6 col-xs-12">
+                        <label for="input3">Age</label>
+                        <input type="number" ng-model="age" name="age" class="form-control" id="input3" placeholder="Enter your Age" required>
+                        <small class="text-danger" ng-show="registration_Form.age.$touched && registration_Form.age.$invalid || registration_Form.age.$error.required">Enter a valid Age</small>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <label for="input4">Occupation</label>
+                        <select ng-model="occupation" class="form-control" name="occupation" required>
+                            <option selected disabled>Select Your Occupation</optionselecte>
+                                <optgroup label='Categories'>
+                                    <option value="Managers">Managers</option>
+                                    <option value="Professionals">Professionals</option>
+                                    <option value="Technicians">Technicians</option>
+                                </optgroup>
+                        </select>
+                        <small class="text-danger" ng-show="registration_Form.occupation.$error.required">Select a valid Occupation</small>
+                    </div>
+                </div>
+                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                    <div class="col-md-6 col-xs-12">
+                        <label for="input7">City</label>
+                        <input type="text" ng-model="city" name="city" class="form-control" id="input7" placeholder="Enter your City" required>
+                        <small class="text-danger" ng-show="registration_Form.city.$touched && registration_Form.city.$invalid || registration_Form.city.$error.required">Enter a valid City</small>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <label for="input8">District</label>
+                        <input type="text" ng-model="district" name="district" class="form-control" id="input8" placeholder="Enter your District" required>
+                        <small class="text-danger" ng-show="registration_Form.district.$touched && registration_Form.district.$invalid || registration_Form.district.$error.required">Enter a valid District</small>
+                    </div>
+                </div>
+                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                    <div class="col-md-6 col-xs-12">
+                        <label for="input7">State</label>
+                        <input type="text" ng-model="state" name="state" class="form-control" id="input7" placeholder="Enter your City" required>
+                        <small class="text-danger" ng-show="registration_Form.statet.$touched && registration_Form.state.$invalid || registration_Form.state.$error.required">Enter a valid State</small>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <label for="input8">PIN</label>
+                        <input type="number" ng-model="pin" name="pin" class="form-control" id="input8" placeholder="Enter your District" required>
+                        <small class="text-danger" ng-show="registration_Form.pin.$touched && registration_Form.pin.$invalid || registration_Form.pin.$error.required">Enter a valid PIN</small>
+                    </div>
+                    <!--
+                         ng-disabled -> check bottom
+                    -->
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../JS_Angular/public/angular-1.7.5/angular.min.js"></script>
+<script src="../project_SouthIndiaBank/public/jquery3.3.1/jquery-3.3.1.min.js"></script>
+<script src="../project_SouthIndiaBank/public/bootstrap-4.0.0/js/popper.min.js"></script>
+<script src="../project_SouthIndiaBank/public/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+    var app = angular.module('register', []).controller('controlRegister', function ($scope) {
+       
+
+    });
+</script>
+
+</html>
+<!--
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<h2>Validation Example</h2>
+
+<form  ng-app="myApp"  ng-controller="validateCtrl"
+name="myForm" novalidate>
+
+<p>Username:<br>
+  <input type="text" name="user" ng-model="user" required>
+  <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+  <span ng-show="myForm.user.$error.required">Username is required.</span>
+  </span>
+</p>
+
+<p>Email:<br>
+  <input type="email" name="email" ng-model="email" required>
+  <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+  <span ng-show="myForm.email.$error.required">Email is required.</span>
+  <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+  </span>
+</p>
+
+<p>
+  <input type="submit"
+  ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+  myForm.email.$dirty && myForm.email.$invalid">
+</p>
+
+</form>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+  $scope.user = 'John Doe';
+  $scope.email = 'john.doe@gmail.com';
+});
+</script>
+
+</body>
+</html>
+
+-->

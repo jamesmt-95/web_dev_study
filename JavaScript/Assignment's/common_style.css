@@ -1,0 +1,40 @@
+table
+{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+h2{
+  text-align:center;
+}
+/*#tv_cat{
+  text-transform: uppercase;
+}*/
+#tv_bill, #print_fib, #print_posneg, #print_grade, #odd_even, #print_vote_status, #print_char_status, #print_leap, #print_sum{
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+
+}
+#left{
+  float: left;
+  font-size: 25px;
+
+}
+#right{
+  float: right;
+  font-size: 25px;
+}
+#container{
+  text-align: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* #elgible{
+  color: green;
+}
+#not_elgible{
+  color: red;
+} */

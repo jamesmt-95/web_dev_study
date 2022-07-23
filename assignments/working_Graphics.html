@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Working with Graphics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    
+</head>
+
+<body onload="loadImg(),Chart()">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <p class="display-4">Basic Graphics with </p>
+                <canvas id="testCanvas" width="300" height="300" style="border:2px solid black">
+                </canvas>
+            </div>
+            <div class="col-md-4">
+                <p class="display-4">Basic Graphics with Line & Circle</p>
+                <canvas id="testCanvas1" width="300" height="300" style="border:2px solid black">
+                </canvas>
+            </div>
+            <div class="col-md-4">
+                <p class="display-4">Basic Graphics with Gradient</p>
+                <canvas id="testCanvas3" width="300" height="300" style="border:2px solid black">
+                </canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <p class="display-4">Basic Graphics with Image</p>
+                <canvas id="testCanvas4" width="300" height="300" style="border:2px solid black">
+                </canvas>
+            </div>
+            <div class="col-md-4">
+                    <p class="display-4">Basic Graphics with Chart</p>
+                <div id="chartContainer" >
+                </div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    
+    // first Canvas
+    var get = document.getElementById("testCanvas");
+    var out = get.getContext("2d");
+    out.fillStyle = "#930000";
+    out.fillRect(5, 5, 150, 150);
+    out.clearRect(25, 25, 50, 50);
+    // fillRect(x, y, width, height);
+
+    // second Canvas
+    var get1 = document.getElementById("testCanvas1");
+    var out1 = get1.getContext("2d");
+    out1.moveTo(0, 0);
+    out1.lineTo(300, 300);
+    out1.stroke();
+    out1.beginPath();
+    out1.arc(200, 200, 100, 0, 2 * Math.PI);
+    //arc(x, y, radius,starting_angle,ending_angle);
+    out1.stroke();
+
+
+    // third Canvas
+    var get2 = document.getElementById("testCanvas3");
+    var out2 = get2.getContext("2d");
+    // gradient
+    var gra1 = out2.createLinearGradient(0, 0, 100, 0);
+    // createLinearGradient(x,y,x1,y1) - creates a linear gradient
+    // createRadialGradient(x,y,r,x1,y1,r1) - creates a radial/circular gradient Once we have a gradient object, we must add two or more color stops.
+    gra1.addColorStop(0, "red");
+    gra1.addColorStop(1, "black");
+    // filling gradient
+    out2.fillStyle = gra1;
+    out2.fillRect(10, 10, 150, 80);
+    //canvas text
+    out2.font = "32px Arial";
+    out2.strokeText("This is Canvas Text", 5, 200);
+
+    // fourth Canvas
+    function loadImg() {
+        var get3 = document.getElementById("testCanvas4");
+        var out3 = get3.getContext("2d");
+        var img1 = new Image();
+        img1.src = "source/image/sketch.jpg";
+        img1.onload = function () {
+            out3.drawImage(img1, 0, 0, 300, 300);
+        }
+    }
+
+    function Chart(){
+    var chart = new CanvasJS.Chart("chartContainer", {
+
+      title:{
+        text: "Top Seller of Smartphones in Q4-2018"              
+      },
+      data: [//array of dataSeries              
+        { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+         type: "column",
+         dataPoints: [
+         { label: "Xiaomi", y: 75 },
+         { label: "Samsung", y: 65 },
+         { label: "Honor", y: 42 },                                    
+         { label: "Huawei", y: 48 },
+         { label: "Oppo", y: 58 }
+         ]
+       }
+       ]
+     });
+
+    chart.render();
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<!-- <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script> -->
+
+</html>

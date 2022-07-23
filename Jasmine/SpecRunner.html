@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v3.4.0</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-3.4.0/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-3.4.0/jasmine.css">
+
+  <script src="lib/jasmine-3.4.0/jasmine.js"></script>
+  <script src="lib/jasmine-3.4.0/jasmine-html.js"></script>
+  <script src="lib/jasmine-3.4.0/boot.js"></script>
+
+  <!-- include source files here... -->
+  <script src="src/Player.js"></script>
+  <script src="src/Song.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/SpecHelper.js"></script>
+  <script src="spec/PlayerSpec.js"></script>
+<script>
+  let Addition = function(){
+    return{
+      add:function(a,b){
+        return a+b;
+      }
+    }
+  }
+
+  describe( 'Addition',function(){
+    let calAdd = new Addition();
+    it('Add two number',function(){
+    expect(calAdd.add(5,5)).toBe(10);
+    })
+  });
+
+  let Subtract = function(){
+    return{
+      sub:function(a,b){
+        return a-b;
+      }
+    }
+  }
+  
+  describe('Subtract',function(){
+    let calSub = new Subtract();
+    it( 'Subtract two number',function(){
+    expect(calSub.sub(5,5)).toBe(0);
+    })
+  });
+
+  let Multiply = function(){
+    return{
+      mul:function(a,b){r
+        return a*b;
+      }
+    }
+  }
+  
+  describe( 'Multiply',function(){
+    let calMult = new Multiply();
+    it('Multiply two number',function(){
+    expect(calMult.mul(5,5)).toBe(25);
+    })
+  });
+
+
+  let Modulus = function(){
+    return{
+      mod:function(a,b){
+        return a%b;
+      }
+    }
+  }
+  
+  describe( 'Modulus',function(){
+    let calMod = new Modulus();
+    it('Mod two number',function(){
+    expect(calMod.mod(5,2)).toBe(1);
+    //toBe vs toEqual  both can be used with priiitve data types
+    //toEqual when comparing objects
+    
+    })
+  });
+  </script>
+</head>
+
+<body>
+</body>
+</html>

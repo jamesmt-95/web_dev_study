@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Cookie-Parser</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="input-group mb-3 col-md-8 mx-auto mt-4">
+                <input type="text" class="form-control" id="Username" name="user" placeholder="Enter Your Name"
+                    aria-label="Username" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <!-- <span class="input-group-text" id="basic-addon1"></span> -->
+                    <button class="btn btn-outline-primary" id="set_cookie" type="button">Set
+                        Cookie</button>
+                    <button class="btn btn-outline-primary" id="des_cookie" type="button">Delete
+                        Cookie</button>
+                    <!-- <button class="btn btn-outline-primary" id="des_cookie" type="button" onclick="location='destroy_Cookie'">Delete
+                                Cookie</button> -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script>
+    $('#set_cookie').on('click', () => {
+        $get_user = $('#Username').val()
+
+        //url: 'http://127.0.0.1:8080/set_User/Cookie' or url: '/set_User/Cookie'
+        $.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1:8080/set_User/Cookie',
+            data: {
+                user: $get_user,
+                context: 'Set Cookie'
+            },
+            success: (response) => {
+                console.log(response)
+            }
+        });
+
+    });
+
+    $('#des_cookie').on('click', () => {
+        $get_user = $('#Username').val()
+
+        //url: 'http://127.0.0.1:8080/set_User/Cookie' or url: '/set_User/Cookie'
+        $.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1:8080/set_User/ClearCookie',
+            data: {
+                user: $get_user,
+                context: 'Clear Cookie'
+            },
+            success: (response) => {
+                console.log(response)
+                if (response.trim() == 'true') {
+                    alert('Cookie Destroyed')
+                }
+
+
+            }
+        });
+    });
+</script>
+
+
+
+
+</html>

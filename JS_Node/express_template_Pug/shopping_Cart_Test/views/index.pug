@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+  head
+    title Test
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+    link(rel='stylesheet', href='./style.css')
+    style.
+      #side_navbar{
+      /* box-shadow: 0 0 17px 1px grey; */
+      }
+  body
+    .container-fluid
+      .navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand Flipkart
+        button.navbar-toggler(type='button', data-target='#navbar_container', data-toggle='collapse')
+          span.navbar-toggler-icon
+        #navbar_container.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='#') Home
+            li.nav-item.dropdown
+              a#navbar_drop.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', role='button') Manage
+              .dropdown-menu(aria-labelledby='navbarDropdown')
+                a.dropdown-item(href='#') Edit
+                .dropdown-divider
+                a.dropdown-item(href='#') View
+          form.form-inline.my-2.my-lg-0
+            input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+            button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+    .container-fluid
+      .row.mt-4
+        #side_navbar.col-md-3.col-xs-12
+          ul#list_group.list-group
+            a#shop_home.list-group-item.list-group-item-action.active(href='/') Home
+            a#shop_cart.list-group-item.list-group-item-action(href='/view_cart') My Cart
+              span.float-right.badge.badge-light#cart_badge 
+        #main_content.col-md-9.col-xs-12
+          block content
+          .row.mt-4
+            #fetch_editForm.col-md-12.col-xs-12
+          
+          
+           
+  script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+  script(src='./config.js')

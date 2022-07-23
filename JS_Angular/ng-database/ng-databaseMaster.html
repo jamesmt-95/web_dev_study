@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Angular Database-JSON</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" ng-app="studentGet" ng-controller="studentCtrl">
+        <p class="text-center text-info display-4">Student Details</p>
+        <table class="mt-4 table" >
+            <thead>
+                <tr>
+                    <th>S.ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>DOB</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>Tot.Marks</th>
+                    <th>Average</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in display">
+                    <td scope="row">{{x.S_ID}}</td>
+                    <td>{{x.Name}}</td>
+                    <td>{{x.Age}}</td>
+                    <td>{{x.DOB}}</td>
+                    <td>{{x.City}}</td>
+                    <td>{{x.State}}</td>
+                    <td>{{x.Country}}</td>
+                    <td>{{x.Tot_Marks}}</td>
+                    <td>{{x.Tot_Marks/4 | number:2}}</td>
+                    <!-- filter number:2 2 fractions -->
+                    <!-- <td>{{x.Average}}</td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script>
+    angular.module("studentGet", []).controller("studentCtrl", function ($scope, $http) {
+        $http.get("ng-dataJSON.json")
+            .then(function (response) {
+                $scope.display = response.data.studentData;
+            });
+    });
+</script>
+</html>

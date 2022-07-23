@@ -1,0 +1,32 @@
+extends index.pug
+
+//- block edit
+block edit
+
+block content
+    table.table
+        thead
+            tr
+                th(scope='col')  ID
+                th(scope='col') Name
+                th(scope='col') Sex
+                th(scope='col') Age
+                th(scope='col') Designation
+        tbody
+        - let j=1
+        each i in data
+        
+            tr
+                th(scope='row') #{j}
+                //instead if #{i.emp_no} declared j as 1, then incrementing by 1inside the each loop  
+                td  #{i.emp_name}
+                td  #{i.emp_sex}
+                td  #{i.emp_age}
+                td  #{i.emp_desg}
+            -j++
+
+
+
+    
+
+

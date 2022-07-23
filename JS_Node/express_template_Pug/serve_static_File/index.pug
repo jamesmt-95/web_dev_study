@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+    head
+    - const title= 'Welcome'
+        title #{title}
+        // two way of passing value. 1 title= title or title #{title}
+    body
+
+    - const p_style = {'color':'red', 'font-size':'25px'}
+        p(style=p_style).
+            Welcome 
+
+    - const c_class= ['class1','class2','class3']
+        p(class=c_class)
+
+
+    - const myattributes = {'class':'fetch','id':'img_id', 'src':'Image.jpg', 'alt':'Img using express'}
+        //img.fetch#img_id(src='Image.jpg', alt='Img using express')
+        img(class=c_class)&attributes(myattributes)
+            
+            

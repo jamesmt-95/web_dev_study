@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+head
+    title Login
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+body
+    .mt-4.container.card
+        table.table.table-striped
+            thead
+                tr
+                    th(scope='col') ID
+                    th(scope='col') Name
+                    th(scope='col') Age
+            tbody
+            each i in result
+                tr
+                    th(scope='row') #{i.ID}
+                    td #{i.name}
+                    td #{i.age}
+                    //- td= i.age this way also possible
+
+script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+ crossorigin="anonymous")
+script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+ crossorigin="anonymous")

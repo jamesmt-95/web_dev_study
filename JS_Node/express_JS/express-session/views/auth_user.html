@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Login</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="mt-4  container card">
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" class="form-control" name="user_mail" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+			<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword1">Password</label>
+			<input type="password" class="form-control" name="user_pass" id="password" placeholder="Password">
+
+			<!-- <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+			<div class="form-group text-center">
+				<button type="submit" class="btn btn-primary mt-4" id="submit">Submit</button>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+ crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+ crossorigin="anonymous"></script>
+<script>
+	$("#submit").click(function () {
+		$email = $("#email").val();
+		$pass = $("#password").val();
+		/*
+		 * Perform some validation here.
+		 */
+
+		/*
+		$.ajax({
+			type:'post',
+			url:'http://localhost:3000/login',
+			data:{
+				email:$email,
+				pass:$pass
+			},
+			success:(response)=>
+            {
+				console.log(response)
+				if(response.trim() === 'done')			
+			{
+				window.location.href="/admin";
+			}
+			}
+		})
+		*/
+		$.post("http://127.0.0.1:5000/login", {
+			email: $email,
+			pass: $pass
+		}, function (response) {
+			console.log(response)
+			if (response.trim() == 'done') {
+				// window.location.href="/admin";
+				location = "/admin";
+			}
+		});
+	});
+</script>
+
+</html>

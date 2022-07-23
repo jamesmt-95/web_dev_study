@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular - ng-Animation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="../project_SouthIndiaBank/public/bootstrap-4.0.0/css/bootstrap.min.css">
+    <style>
+        /* pre-defined style for ng-hide method(style is not required) */
+/* .ng-hide {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  top:-200px;
+  left: 200px;
+} */
+
+</style>
+
+</head>
+
+<body>
+
+    <!-- This way also we can hide/show element -->
+    <!-- <div ng-app="ngAni" ng-controller="myCtrl">
+        <h4>Do you want to hide the Content <input type="checkbox" ng-model="myCheck"></h4>
+        <div class="card bg-info text-center text-light" ng-hide="myCheck">
+            Welcome to Angular Animation <br>
+            <p>AngularJS is a JavaScript-based open-source front-end web application framework mainly maintained by
+                Google and by a community of individuals and corporations to address many of the challenges encountered
+                in developing single-page applications</p>
+        </div>
+    </div> -->
+
+    <div ng-app="ngAni" ng-controller="myCtrl">
+        <button type="button" class="btn btn-primary" ng-click="hide_div()">{{btn_status}}</button>
+        <div class="mt-4 card bg-info text-center text-light" ng-show="show_div">
+            Welcome to Angular Animation <br>
+            <p>AngularJS is a JavaScript-based open-source front-end web application framework mainly maintained by
+                Google and by a community of individuals and corporations to address many of the challenges encountered
+                in developing single-page applications</p>
+        </div>
+    </div>
+
+</body>
+<script src="../JS_Angular/public/angular-1.7.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+<script src="../project_SouthIndiaBank/public/jquery3.3.1/jquery-3.3.1.min.js"></script>
+<script src="../project_SouthIndiaBank/public/bootstrap-4.0.0/js/popper.min.js"></script>
+<script src="../project_SouthIndiaBank/public/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+<script>
+    angular.module('ngAni', ['ngAnimate']).controller('myCtrl', function ($scope) {
+        $scope.show_div = false;
+        $scope.btn_status = 'Show';
+        $scope.hide_div = function () {
+            //using conditional(ternary) operator
+            $scope.show_div = $scope.show_div ? false : true;
+            $scope.btn_status = $scope.btn_status === 'Show' ? 'Hide' : 'Show';
+
+        }
+
+
+    });
+</script>
+
+</html>

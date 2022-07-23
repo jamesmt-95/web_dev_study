@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular - Form Validation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="../project_SouthIndiaBank/public/bootstrap-4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-1" ng-app="appTest">
+        <p class="pt-1 text-center" style="font-weight: bold; font-size:25px;color: #930000;">
+            Angular - Services
+        </p> 
+        <div class="row" ng-controller="ServiceCtrl">
+
+
+            <!-- AngularJS service is a function, or object, that is available for, and limited to, your AngularJS application. -->
+            <div class="col-md-12">
+                <label>1. Service - $location</label>
+                <br>
+                <code>
+                    angular.module('appService', []).controller('ServiceCtrl', function ($scope, $location) {
+                    $scope.location = $location.absurl();
+                    });
+                </code>
+                <br>
+                <p>{{location}}</p>
+                <small class="text-muted">Angular Service-$location</small>
+            </div>
+            <!-- Service Examples
+                1. $location - return information about the location of the current web page.
+                2. $timeout
+                3. $interval
+                 4. $http - is an AngularJS service for reading data from remote servers.
+                 example:
+            var app = angular.module('myApp', []);
+            angular.module('appTest', []).controller('ServiceCtrl', function ($scope,  $http) {
+                $http.get("welcome.html").then(function (response) {
+                     welcome.html - contains Hello AngularJS Students 
+                    $scope.myWelcome = response.data;
+                });
+            });
+
+            
+        -->
+
+
+            <div class="mt-3 col-md-12">
+                <label>2. Select ng-options </label>
+                <select class="form-control" ng-model="selectFruits" ng-options="x.name for x in fruits"></select>
+                <small class="text-muted">Select - ng-options</small>
+
+            </div>
+
+            <div class="mt-3 col-md-12">
+                <label>2. Select_option ng-repeat </label>
+                <select class="form-control" ng-model="select_Fruits">
+                    <option ng-repeat="x in fruits" value="{{x.name}}">{{x.name}}</option>
+                </select>
+                <small class="text-muted">Selected Fruit : {{selectFruits}}</small>
+
+            </div>
+            <div class="mt-3 col-md-12">
+                <label>3. While using ng-options, the selected value can be an object.So that it can hold more
+                    information</label>
+                <select class="form-control" ng-model="selectFruits" ng-options="x.name for x in fruits"></select>
+                <small class="text-muted">Select - ng-options</small>
+                <small class="text-muted">Selected Fruit Quantity - {{selectFruits.Quantity}}</small>
+
+            </div>
+
+            <!-- Angular Js Forms are same previous , with ng-app, ng-model and ng-bind -->
+            <div class="mt-3 col-md-12">
+                <label>4.Angular JS -Forms</label>
+                <form class="card" novalidate>
+                    <label for="input1">Usename</label>
+                    <input ng-model="user.firstName" type="text" class="form-control" id="input1">
+                    <label for="input2">Password</label>
+                    <input ng-model="user.lastName" type="text" class="form-control" id="input2">
+                    <div class="col-md-2  mx-auto">
+                        <button ng-click="reset()" type="button" class="btn btn-primary">Reset</button>
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+
+
+                </form>
+                <!-- <p>Current Value = {{user}}</p> -->
+                <!-- <p>master = {{master}}</p> -->
+            </div>
+
+            <div class="mt-3 col-md-12">
+                <label>5. Angular - Checkbox</label> <br>
+                <input type="checkbox" ng-model="verifyCheck"><br>
+                <h4 ng-show="verifyCheck">Checkbox Selected</h4><br>
+                <small class="text-muted">ng-show="verifyCheck"</small>
+                <!-- ng-show - hide/show element based on true/false -->
+            </div>
+
+
+            <div class="mt-3 col-md-12">
+                <label>6. Angular - Radio Button (ng-switch-when)</label> <br>
+                <div class="form-check form-check-inline">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" ng-model="country" class="form-check-input" value="India" name="country">
+                            India
+                        </label>
+                        <label class="form-check-label">
+                            <input type="radio" ng-model="country" class="form-check-input" value="SriLanka" name="country">
+                            SriLanka
+                        </label>
+                    </div>
+                </div>
+                <br>
+                <div ng-switch="country">
+                    <small class="text-muted" ng-switch-when="India">Selected India</small>
+                    <small class="text-muted" ng-switch-when="SriLanka">Selected SriLanka</small>
+                </div>
+            </div>
+
+
+
+            <div class="mt-3 col-md-12">
+                <label>5. Angular - Select (ng-switch-when)</label> <br>
+                <select ng-model="fruits">
+                    <option value="Apple">Apple</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Dates">Dates</option>
+                </select>
+                <div ng-switch="fruits">
+                    <small class="text-muted" ng-switch-when="Apple">Selected Apple</small>
+                    <small class="text-muted" ng-switch-when="Orange">Selected Orange</small>
+                    <small class="text-muted" ng-switch-when="Dates">Selected Dates</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+<script src="../JS_Angular/public/angular-1.7.5/angular.min.js"></script>
+<script src="../project_SouthIndiaBank/public/jquery3.3.1/jquery-3.3.1.min.js"></script>
+<script src="../project_SouthIndiaBank/public/bootstrap-4.0.0/js/popper.min.js"></script>
+<script src="../project_SouthIndiaBank/public/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+<script>
+    angular.module('appTest', []).controller('ServiceCtrl', function ($scope, $location) {
+        $scope.location = $location.absUrl();
+        $scope.fruits = [{
+                name: 'Apple',
+                Quantity: '15Kg'
+            }, {
+                name: 'Orange',
+                Quantity: '10Kg'
+            },
+            {
+                name: 'Kiwi',
+                Quantity: '15kg'
+            },
+            {
+                name: 'Pineapple',
+                Quantity: '17kg'
+            },
+            {
+                name: 'Banana',
+                Quantity: '15kg'
+            },
+            {
+                name: 'Apricot',
+                Quantity: '50kg'
+            },
+            {
+                name: 'Olives',
+                Quantity: '40kg'
+            },
+            {
+                name: 'Lemon',
+                Quantity: '42kg'
+            },
+        ];
+
+        $scope.master = {
+            firstName: "Enter your Username",
+            lastName: "Enter your Password"
+        };
+        $scope.reset = function () {
+            $scope.user = angular.copy($scope.master);
+        };
+        //Already running reset function
+        $scope.reset();
+
+
+
+
+
+
+
+    });
+</script>
+
+</html>

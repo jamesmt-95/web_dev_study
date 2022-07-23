@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Registration</title>
+<link rel="stylesheet" href="Emp_Registration_style.css">
+  </head>
+  <body>
+    <center><h2><font id="s_title">Student Registration</font></h2></center>
+      <br>
+      <table>
+        <tr>
+          <td>Student ID</td>
+          <td><input type="text" name="sid"></td>
+        </tr>
+        <br>
+<tr>
+  <td>Student Name</td>
+  <td><input type="text" name="sname"></td>
+</tr>
+<br>
+<tr>
+  <td>Age</td>
+  <td><input type="text" name="age"></td>
+</tr>
+<br>
+<tr>
+  <td>Gender</td>
+  <td>
+  <input type="radio" name="gend_radio" checked>Male &nbsp
+  <input type="radio" name="gend_radio">Female
+</td>
+</tr>
+<br>
+<tr>
+  <td>Address</td>
+  <td><textarea name="name" rows="4" cols="25">Address</textarea></td>
+</tr>
+<br>
+<tr>
+  <td>Select City</td>
+  <td><select class="city" name="std_city">
+    <option value="Mumbai">Mumbai</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Cochin">Cochin</option>
+    <option value="Kolkata">Kolkata</option>
+  </select></td>
+</tr>
+<tr>
+  <td>Select State</td>
+  <td><select class="std_state" name="std_state">
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Kerala">Kerala</option>
+  </select></td>
+</tr>
+<br>
+<tr>
+  <td>PIN</td>
+  <td><input type="text" name="std_pin"></td>
+</tr>
+<tr>
+  <td>Qualification</td>
+  <td>10<input type="checkbox" name="std_quali">
+<br>
+12 <input type="checkbox" name="std_quali">
+<br>
+Bachelor <input type="checkbox" name="std_quali">
+  </td>
+</tr>
+
+<!--submit and reset-->
+<tr>
+  <td><input type="reset" name="frm_sbm" value="Reset"></td>
+  <td><input type="submit" name="frm_reset" value="Submit"></td>
+</tr>
+      </table>
+  </body>
+</html>

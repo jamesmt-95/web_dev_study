@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Prognoz | Work</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <!-- user-scalable=no -->
+  <!-- <link rel="icon" href="source/image/favicon.jpg"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="public/bootstrap-4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <p class="display-4">Bootstrap 4 Table</p>
+    </div>
+    <div class="row">
+      <table class="text-center table table-hover bg-info">
+        <!-- different table classes are .table-striped .table-bordered .table-hover .table-condensed
+        alays responsive - Across every breakpoint, use .table-responsive for horizontally scrolling tables.
+        <div class="table-responsive">
+        <table class="table">
+        ...
+      </table>
+    </div>
+  -->
+  <caption class="text-primary">Bootstrap Sample Table</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <!-- th scope="col" The scope attribute specifies whether a header cell is a header
+      for a column, row, or group of columns or rows. -->
+      <th scope="col">Seccond-name</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active">
+      <th scope="row">1</td>
+        <td>James</td>
+        <td>Thankachan</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <th scope="row">2</td>
+          <td>Amar</td>
+          <td>Pokle</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <th scope="row">3</td>
+            <td>Santhosh</td>
+            <td>Kumar</td>
+            <td>24</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr class="my-4">
+    </div>
+    <!-- second row for-->
+    <div class="row">
+      <p class="display-4">Accordion Collapse Bootstrap 4</p>
+      <div class="accordion w-75 mx-auto" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Tell me About You <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="form-group">
+                <div class="form-inline">
+                  <label class="mr-2 font-weight-bold form-check-label">
+                    I'm
+                  </label>
+                  <label class="form-check-label" for="gridRadios1">
+                    Male
+                  </label>
+                  <input class="mx-2 form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                  <label class="form-check-label" for="gridRadios2">
+                    Female
+                  </label>
+                  <input class="mx-2 form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                </div>
+                <label for="comment">Describe more about you...</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Your Basic Qualification <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+
+                  <label class="form-check-label" for="defaultCheck1">
+                    10 <sup>th</sup> Standard
+                  </label>
+                </div>
+                <input class="form-control" type="text" value="" placeholder="Name of the School" id="defaultCheck1">
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    12 <sup>th</sup> Standard
+                  </label>
+                </div>
+                <input class="form-control" type="text" value="" placeholder="Name of the School" id="defaultCheck1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Extra Qualification <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="form-group">
+                <div class="form-check">
+                  <label class="col-form-label" for="selectBachelor">
+                    Bachelor Degree
+                  </label>
+                </div>
+                <select class="custom-select" id="selectBachelor">
+                  <option selected>Select Course</option>
+                  <option value="1">Bsc.IT</option>
+                  <option value="2">BCA</option>
+                  <option value="3">B.Com</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <label class="form-check-label" for="selectMaster">
+                    Master Degree
+                  </label>
+                </div>
+                <select class="custom-select">
+                  <option selected>Select Course</option>
+                  <option value="1">Msc.IT</option>
+                  <option value="2">MCA</option>
+                  <option value="3">M.Com</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Your Experience <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="my-1 form-row">
+                <div class="col-7">
+                  <input type="text" class="form-control" placeholder="Company Name 1">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Role">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="No.of Months">
+                </div>
+              </div>
+              <div class="my-1 form-row">
+                <div class="col-7">
+                  <input type="text" class="form-control" placeholder="Company Name 2">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Role">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="No.of Months">
+                </div>
+              </div>
+              <div class="my-1 form-row">
+                <div class="col-7">
+                  <input type="text" class="form-control" placeholder="Company Name 3">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Role">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="No.of Months">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+              <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Personal Details <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="container">
+                <div class="my-2 row">
+                  <div class="col-xs-12 col-md-6">
+                    <input type="text" class="form-control" placeholder="First Name">
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <input type="text" class="form-control" placeholder="Second Name">
+                  </div>
+                </div>
+                <div class="my-2 row">
+                  <div class="col-xs-12 col-md-3">
+                    <input type="text" class="form-control" placeholder="DOB">
+                  </div>
+                  <div class="col-xs-12 col-md-3">
+                    <input type="text" class="form-control" placeholder="E-Mail">
+                  </div>
+                  <div class="col-xs-12 col-md-3">
+                    <input type="text" class="form-control" placeholder="Mobile No">
+                  </div>
+                  <div class="col-xs-12 col-md-3">
+                    <input type="text" class="form-control" placeholder="ZIP">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="public/jquery3.3.1/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script src="public/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+</html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Add Mark</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12 text-center">
+                <p class="display-4 text-info lead mt-4 pt-3">Prognoz Technologies</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-xs-12 col-md-6 offset-md-3">
+                <p class="lead text-success">Result Entry Portal</p>
+                <div class="list-group">
+                    <a href="#" data-target="#form_Modal" data-toggle="modal" class="list-group-item list-group-item-action active">Multiple
+                        Choice Quiz</a>
+                    <a href="#" data-target="#form_Modal" data-toggle="modal" class="list-group-item list-group-item-action">Mock
+                        Test</a>
+                    <a href="#" data-target="#form_Modal" data-toggle="modal" class="list-group-item list-group-item-action">Case
+                        Study Project</a>
+                    <a href="#" data-target="#form_Modal" data-toggle="modal" class="list-group-item list-group-item-action">Web
+                        Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <div class="modal fade" id="form_Modal" tabindex="-1" role="dialog" aria-labelledby="form_Modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <!--modal-dialog-centered-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title lead" id="form_Modal">Enter your Student Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#mcq" role="tab" data-toggle="tab">Multiple Choice Quiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mock" role="tab" data-toggle="tab">Mock Test</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#case_study" role="tab" data-toggle="tab">Case Study Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#web_project" role="tab" data-toggle="tab">Web Project</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="mcq">
+                            <div class="mt-4  container card">
+                                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input1">Fullname</label>
+                                        <input type="text" class="form-control" id="input1" placeholder="Enter the Student Name">
+                                        <!-- <small id="nameHelp" class="text-muted">ex. Ramesh Mohan</small> -->
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input_batch">Choose Subject</label>
+                                        <select class="form-control" name="input_batch">
+                                            <option selected disabled>Select Subject</option>
+                                            <!-- <optgroup label='Personal Banking'>-->
+                                            <option>C++</option>
+                                            <option>Programming with C#</option>
+                                            <option>ASP.NET</option>
+                                            <option>MVC with .NET</option>
+                                            <option>Core Java</option>
+                                            <option>Advanced Java</option>
+                                            <option>Spring & Hibernate</option>
+                                            <option>Python Web Developer</option>
+                                            <option>Full Stack Development(MEARN Stack)</option>
+                                            <!--</optgroup>-->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input_term">Choose Term</label>
+                                        <select class="form-control" name="input_term">
+                                            <option selected disabled>Select Term</option>
+                                            <!-- <optgroup label='Personal Banking'>-->
+                                            <option>Q1</option>
+                                            <option>Q2</option>
+                                            <option>Q3</option>
+                                            <option>Q4</option>
+                                        </select>
+                                        <small id="nameHelp" class="text-muted float-md-right"> <a id="add_term" href="#">Add
+                                                Term <i class="fa fa-plus-circle" aria-hidden="true"></i></a></small>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input2">Enter the Score</label>
+                                        <input type="text" class="form-control" id="input2" placeholder="Enter the Score">
+                                    </div>
+                                </div>
+                                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input3">Remarks</label>
+                                        <input type="text" class="form-control" id="input3" placeholder="Remarks if any">
+                                        <!-- <small id="nameHelp" class="text-muted">ex. Ramesh Mohan</small> -->
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input4">Question Pattern No:</label>
+                                        <input type="text" class="form-control" id="input4" placeholder="Question Pattern Number">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div role="tabpanel" class="tab-pane fade" id="mock">
+                            <div class="mt-4  container card">
+                                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input1">Fullname</label>
+                                        <input type="text" class="form-control" id="input1" placeholder="Enter the Student Name">
+                                        <!-- <small id="nameHelp" class="text-muted">ex. Ramesh Mohan</small> -->
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input_batch">Choose Mock</label>
+                                        <select class="form-control" name="input_batch">
+                                            <option selected disabled>Select Mock Subject</option>
+                                            <!-- <optgroup label='Personal Banking'>-->
+                                            <option>Core Java</option>
+                                            <option>Advanced Java</option>
+                                            <option>Spring & Hibernate</option>
+                                            <option>Python Web Developer</option>
+                                            <option>Full Stack Development(MEARN Stack)</option>
+                                            <!--</optgroup>-->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input_term">Choose Term</label>
+                                        <select class="form-control" name="input_term">
+                                            <option selected disabled>Select Term</option>
+                                            <!-- <optgroup label='Personal Banking'>-->
+                                            <option>Q1</option>
+                                            <option>Q2</option>
+                                            <option>Q3</option>
+                                            <option>Q4</option>
+                                        </select>
+                                        <small id="nameHelp" class="text-muted float-md-right"> <a id="add_term" href="#">Add
+                                                Term <i class="fa fa-plus-circle" aria-hidden="true"></i></a></small>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input2">Enter the Score</label>
+                                        <input type="text" class="form-control" id="input2" placeholder="Enter the Score">
+                                    </div>
+                                </div>
+                                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input3">Remarks</label>
+                                        <input type="text" class="form-control" id="input3" placeholder="Remarks if any">
+                                        <!-- <small id="nameHelp" class="text-muted">ex. Ramesh Mohan</small> -->
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input4">Question Pattern No:</label>
+                                        <input type="text" class="form-control" id="input4" placeholder="Question Pattern Number">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div role="tabpanel" class="tab-pane fade" id="case_study">
+                            <div class="mt-4  container card">
+                                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input1">Fullname</label>
+                                        <input type="text" class="form-control" id="input1" placeholder="Enter the Student Name">
+                                        <!-- <small id="nameHelp" class="text-muted">ex. Ramesh Mohan</small> -->
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input_batch">Case Study</label>
+                                        <select class="form-control" name="input_batch">
+                                            <option selected disabled>Select Study Topic</option>
+                                            <!-- <optgroup label='Personal Banking'>-->
+                                            <option>Core Java</option>
+                                            <option>Advanced Java</option>
+                                            <option>Spring & Hibernate</option>
+                                            <option>Python Web Developer</option>
+                                            <option>Full Stack Development(MEARN Stack)</option>
+                                            <!--</optgroup>-->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input_term">Review Term</label>
+                                        <select class="form-control" name="input_term">
+                                            <option selected disabled>Select Term</option>
+                                            <!-- <optgroup label='Personal Banking'>-->
+                                            <option>Q1</option>
+                                            <option>Q2</option>
+                                            <option>Q3</option>
+                                            <option>Q4</option>
+                                        </select>
+                                        <small id="nameHelp" class="text-muted float-md-right"> <a id="add_term" href="#">Add
+                                                Term <i class="fa fa-plus-circle" aria-hidden="true"></i></a></small>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input2">Enter the Score</label>
+                                        <input type="text" class="form-control" id="input2" placeholder="Enter the Score">
+                                    </div>
+                                </div>
+                                <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input3">Remarks</label>
+                                        <input type="text" class="form-control" id="input3" placeholder="Remarks if any">
+                                        <!-- <small id="nameHelp" class="text-muted">ex. Ramesh Mohan</small> -->
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <label for="input4">Case Modules</label>
+                                        <input type="text" class="form-control" id="input4" placeholder="Question Pattern Number">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div role="tabpanel" class="tab-pane fade" id="web_project">
+                                <div class="mt-4  container card">
+                                    <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                        <div class="col-md-6 col-xs-12">
+                                            <label for="input1">Fullname</label>
+                                            <input type="text" class="form-control" id="input1" placeholder="Enter the Student Name">
+                                            <!-- <small id="nameHelp" class="text-muted">ex. Ramesh Mohan</small> -->
+                                        </div>
+                                        <div class="col-md-6 col-xs-12">
+                                            <label for="input_batch">Project Topic</label>
+                                            <select class="form-control" name="input_batch">
+                                                <option selected disabled>Select Project</option>
+                                                <!-- <optgroup label='Personal Banking'>-->
+                                                <option>Core Java</option>
+                                                <option>Advanced Java</option>
+                                                <option>Spring & Hibernate</option>
+                                                <option>Python Web Developer</option>
+                                                <option>Full Stack Development(MEARN Stack)</option>
+                                                <!--</optgroup>-->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                        <div class="col-md-6 col-xs-12">
+                                            <label for="input_term">Project Term</label>
+                                            <select class="form-control" name="input_term">
+                                                <option selected disabled>Select Term</option>
+                                                <!-- <optgroup label='Personal Banking'>-->
+                                                <option>Q1</option>
+                                                <option>Q2</option>
+                                                <option>Q3</option>
+                                                <option>Q4</option>
+                                            </select>
+                                            <small id="nameHelp" class="text-muted float-md-right"> <a id="add_term" href="#">Add
+                                                    Term <i class="fa fa-plus-circle" aria-hidden="true"></i></a></small>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12">
+                                            <label for="input2">Enter the Score</label>
+                                            <input type="text" class="form-control" id="input2" placeholder="Enter the Score">
+                                        </div>
+                                    </div>
+                                    <div class="pt-3 pb-3 col-md-12 col-xs-12 row">
+                                        <div class="col-md-6 col-xs-12">
+                                            <label for="input3">Remarks</label>
+                                            <input type="text" class="form-control" id="input3" placeholder="Remarks if any">
+                                            <!-- <small id="nameHelp" class="text-muted">ex. Ramesh Mohan</small> -->
+                                        </div>
+                                        <div class="col-md-6 col-xs-12">
+                                            <label for="input4">Project Modules</label>
+                                            <input type="text" class="form-control" id="input4" placeholder="Question Pattern Number">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+</html>

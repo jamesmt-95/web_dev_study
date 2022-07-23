@@ -1,0 +1,62 @@
+@media (max-width: 767px){
+.ml_media{
+margin-left: 35%;
+}
+}
+.ml_media i{
+  color: 	#0048A4;
+}
+.ml_media div{
+  /* display: inline;*/
+} 
+.ml_media i:hover{
+  /* box-shadow: 0 0 2px 2px grey; */
+  transform: scale(1.30);
+}
+.prog_logo{
+  width: 60%;
+}
+.nav_frame{
+    /* box-shadow: hor-offset|ver-offset|blur|spread */
+  /* box-shadow: 0 12px 12px -10px grey; */
+  /* box-shadow: 0 0 5px 1px grey;   four-side-shadow */
+  box-shadow: 0 4px 0 0 #0048A4,0 -2px 0 0 #0048A4;
+  border-radius: 0px;
+}
+.p_font li a{
+  font-family: Poppins;
+}
+.p_carouselShadow{
+  box-shadow: 0 0 17px 3px grey;
+}
+.p_jumbotronShadow{
+  box-shadow: 0 0 12px 3px grey;
+}
+.jumbotron p{
+  font-family: Poppins;
+
+}
+.p_imgFrame img{
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 10px 2px grey;
+}
+.p_imgFrame img:hover{
+  box-shadow: 0 0 40px 5px grey;
+}
+.p_imgFrame_outer{
+  box-shadow: 0 12px 12px -6px grey;
+}
+/* b4_multi-Item_Carousel_4in1.html */
+.col-md-3{
+  margin-left:-4px;
+}
+.col-md-3 img{
+  width:100%;
+  height:auto;
+}
+
+body .no-padding{
+  padding-left: 0;
+  padding-right: 0;
+   }

@@ -1,0 +1,15 @@
+extends index.pug
+
+block content
+    .card.mb-4
+        .col-md-8
+            .form-group
+                //label(for='select_edit') Select Employee
+                .input-group.my-3
+                    select.form-control#select_edit
+                        option(disabled='', selected='') Choose Product
+                        each i in data
+                            option(value= i.prd_id) #{i.prd_name}
+                    
+
+

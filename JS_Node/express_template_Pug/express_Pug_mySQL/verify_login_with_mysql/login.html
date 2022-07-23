@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="mt-4  container card">
+
+        <!-- <form action="/submit_login" method="POST" autocomplete="off" novalidate> -->
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="user_mail" id="email" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="user_pass" id="pass" placeholder="Password">
+
+            <!-- <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+            <div class="form-group text-center">
+                <button type="submit" id="submit_data" class="btn btn-primary mt-4">Submit</button>
+            </div>
+        </div>
+        <!-- </form> -->
+    </div>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script>
+    $('#submit_data').click(() => {
+        $email = $('#email').val()
+        $pass = $('#pass').val()
+
+        if (!($email == '') || !($pass == '')) {
+            $.ajax({
+                type: 'POST',
+                url: '/submit_data_form',
+                data: {
+                    U_mail: $email,
+                    U_pass: $pass
+                },
+                success: (response) => {
+                    console.log(response)
+                    if(response.trim()=='Found'){
+                        location ='/user_valid_redirect_user'
+                    }
+                    else{
+                        location ='/user_invalid_redirect_user'
+                    }
+
+
+                }
+
+            })
+
+
+        } else {
+            alert('Please Enter valid Credentials..')
+        }
+
+    })
+</script>
+
+
+
+</html>

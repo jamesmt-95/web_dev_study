@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="common_style.css">
+  <script src="function_call.js" charset="utf-8"></script>
+  <title>Vote Elgible</title>
+</head>
+<body>
+  <h2>Check your Vote Elgibility</h2>
+  <table>
+    <tr>
+      <td>Select Your DOB</td>
+      <td><input type="date" id="pr_dob" ></td>   <!--style-->
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><button type="button" onclick="check_elgible()" name="button">Verify</button></td>
+    </tr>
+
+  </table>
+  <p id="print_vote_status"></p>
+</body>
+</html>

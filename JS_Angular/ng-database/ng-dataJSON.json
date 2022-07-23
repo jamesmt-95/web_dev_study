@@ -1,0 +1,74 @@
+{
+    "studentData": [{
+            "S_ID": "101",
+            "Name": "James",
+            "Age": "22",
+            "DOB": "23-10-1994",
+            "City": "Kayamkulam",
+            "State": "Kerala",
+            "Country": "India",
+            "Tot_Marks": "225"
+            
+        },
+        {
+            "S_ID": "102",
+            "Name": "Jens",
+            "Age": "24",
+            "DOB": "23-11-1995",
+            "City": "Kochi",
+            "State": "Kerala",
+            "Country": "India",
+            "Tot_Marks": "245"
+            
+        },
+        {
+            "S_ID": "103",
+            "Name": "Jacob",
+            "Age": "24",
+            "DOB": "13-11-1995",
+            "City": "Mumbai",
+            "State": "Maharashtra",
+            "Country": "India",
+            "Tot_Marks": "350"
+           
+        },
+        {
+            "S_ID": "104",
+            "Name": "John",
+            "Age": "25",
+            "DOB": "13-12-1992",
+            "City": "Mumbai",
+            "State": "Maharashtra",
+            "Country": "India",
+            "Tot_Marks": "392"
+           
+        },
+        {
+            "S_ID": "105",
+            "Name": "Steve",
+            "Age": "25",
+            "DOB": "02-12-1992",
+            "City": "Mumbai",
+            "State": "Maharashtra",
+            "Country": "India",
+            "Tot_Marks": "402"
+           
+        },
+        {
+            "S_ID": "106",
+            "Name": "Klemens",
+            "Age": "25",
+            "DOB": "13-12-1994",
+            "City": "Dhaka",
+            "State": "Dhaka",
+            "Country": "Bangladesh",
+            "Tot_Marks": "420"
+           
+        }
+    ]
+
+}
+
+
+
+

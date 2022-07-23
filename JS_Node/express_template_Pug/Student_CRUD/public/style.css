@@ -1,0 +1,15 @@
+#side_navbar {
+    /* box-shadow: 0 0 17px 1px grey; */
+    border-radius: 5px;
+    height: 85vh;  /*85% viewport hight (vw for viewport width)*/
+}
+
+#list_group {
+    box-shadow: 0 0 12px 1px grey;
+    border-radius: 5px;
+}
+
+#editForm {
+    box-shadow: 0 0 12px 1px grey;
+    border-radius: 5px;
+}

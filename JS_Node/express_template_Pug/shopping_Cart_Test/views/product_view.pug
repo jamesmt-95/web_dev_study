@@ -1,0 +1,30 @@
+extends index.pug
+
+block content
+    table.table.table-striped
+        thead
+            tr
+                th(scope='col')  ID
+                th(scope='col') Product
+                th(scope='col') Category
+                th(scope='col') Unit Cost
+                th(scope='col') Manage
+        tbody
+        - let j=1
+        each i in data
+        
+            tr
+                th(scope='row') #{j}
+                //instead if #{i.emp_no} declared j as 1, then incrementing by 1inside the each loop  
+                td  #{i.br_name +' '+ i.prd_name}
+                td  #{i.cat_name}
+                td  &#x20B9;#{i.unit_cost} 
+                td  
+                    button.btn.btn-outline-primary.mx-2(data-id= i.prd_id).submit_prd Add to Cart
+            -j++
+
+
+
+    
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular - ng-ShoppingCart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="../project_SouthIndiaBank/public/bootstrap-4.0.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <div ng-app="ngCart" ng-controller="cartCtrl">
+        <p class="display-4 text-center text-info">FruitsKart</p>
+        <ul class="list-group col-md-5 mx-auto">
+            <li ng-repeat="x in addedPrd" class="list-group-item">{{x}}
+                <button type="button" class="btn btn-link close" ng-click="removeItem($index)">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </li>
+            <li class="list-group-item">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <input type="text" ng-model="addProd" class="form-control">
+                    </div>
+                    <!-- $index variable is used to get the Index of the Row created by ng-repeat directive -->
+                    <button type="button" ng-click="addItem()" class="ml-4 btn btn-outline-primary">Add Item</button>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+<script src="../JS_Angular/public/angular-1.7.5/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script> -->
+<script src="../project_SouthIndiaBank/public/jquery3.3.1/jquery-3.3.1.min.js"></script>
+<script src="../project_SouthIndiaBank/public/bootstrap-4.0.0/js/popper.min.js"></script>
+<script src="../project_SouthIndiaBank/public/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+<script>
+    angular.module('ngCart', []).controller('cartCtrl', function ($scope) {
+        $scope.addedPrd = ['Apple', 'Orange', 'Banana'];
+
+        $scope.addItem = function () {
+            $scope.addedPrd.push($scope.addProd);
+        }
+        
+        $scope.removeItem = function (x) {
+            $scope.addedPrd.splice(x, 1);
+            // The splice() method adds / removes items to / from an array, and returns the removed item(s).
+            // here x refers index value,  1 item to be removed
+            
+        //    syntax: array.splice(index, howmany, item1, ....., itemX)
+            // index Required.An integer that specifies at what position to add / remove items, Use negative values to specify the position from the end of
+            //     the array
+            // howmany Optional.The number of items to be removed.If set to 0, no items will be removed
+            // item1, ..., itemX Optional.The new item(s) to be added to the array
+        }
+
+
+
+
+    });
+</script>
+
+</html>

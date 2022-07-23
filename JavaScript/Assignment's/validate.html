@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-6 mt-4">
+            <label for="text1"> E-Mail</label>
+            <input type="text" class="form-control" id="text1" placeholder="Enter E-Mail">
+            <small id="text1_small" class=""></small>
+        </div>
+        <div class="col-md-6">
+            <label for="text1">Password</label>
+            <input type="text" class="form-control" id="text2">
+            <label for="text1">Re-Type Password</label>
+            <input type="text" class="form-control" id="text3">
+            <small id="text3_small" class=""></small>
+
+
+        </div>
+        <a id="submit" class="btn btn-primary ml-3 mt-4" role="button">Validate Data</a>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+<script>
+    $('#submit').on('click', () => {
+        // var text1= document.getElementById('text1').value;
+        // var text2= document.getElementById('text2').value;
+        // var text3 = document.getElementById('text3').value;
+        email();
+        password();
+    });
+
+    email = () => {
+        var text1 = $('#text1').val();
+
+
+        //var email_validate = /^[A-Za-z0-9_-\\.]+@[a-zA-Z]+\\.[a-zA-Z]{2,13}$/;
+        var email_validate = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (text1.search(email_validate) === -1) {
+            $('#text1_small').html('Enter A Valid E-Mail');
+            $('#text1_small').addClass('text-danger');
+            return false;
+        } else {
+            $('#text1_small').html('Your E-Mail is Valid');
+            $('#text1_small').addClass('text-success');
+
+        }
+
+
+    }
+
+    password = () => {
+        var text2 = $('#text2').val();
+        var text3 = $('#text3').val();
+        if (text2 == text3) {
+            $('#text3_small').html('Password Matching');
+            $('#text3_small').addClass('text-success');
+        } else {
+            $('#text3_small').html('Password Mis-Matching');
+            $('#text3_small').addClass('text-danger');
+        }
+    }
+</script>
+
+
+
+
+</html>

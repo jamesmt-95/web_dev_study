@@ -1,0 +1,16 @@
+extends student_view.pug
+
+block edit
+    .card.mb-4
+        .col-md-8
+            .form-group
+                //label(for='select_edit') Select Employee
+                .input-group.my-3
+                    select.form-control#select_edit
+                        option(disabled='', selected='') Choose Employee
+                        each i in data
+                            option(value= i.emp_no) #{i.emp_name}
+                    .input-group-append
+                        button.btn.btn-outline-primary#edit_emp(type='button', data-target='#delete_modal', data-toggle='modal') Edit
+
+

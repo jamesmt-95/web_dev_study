@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!-- meta tags -->
+  <title>HTML5 Tags</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="HTML5,understandHTML5,Prognoz,FullstackCourse">
+  <meta name="description" content="We are working with HTML5 tags, so tht you can go through to understand about HTML5">
+  <!-- <meta http-equiv="refresh" content="30"> -->
+  <meta name="author" content="JacksWeb">
+  <base href="./HTML_Intro/Source_/" target="_blank">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="./css/html5_basic.css">
+  <!-- <link> tag replaces <style></style> -->
+  <script src="./js/html5_.js" charset="utf-8"></script>
+  <noscript>Your Browser is compatiable with JavaScript</noscript>
+</head>
+<body>
+  <header>
+    <!-- <base> tag file path -->
+    <img src="./image/prog.jpg" alt="Prognoz_Logo">
+    <!-- navbar-grouping <a> links -->
+    <nav>
+      <a target="_blank" href="http://www.prognoztech.com/home.html">Home</a>
+      <a target="_blank" href="http://www.prognoztech.com/visionmission.html">About Us</a>
+      <a target="_blank" href="http://www.prognoztech.com/smartEmployement.html">Course</a>
+      <a target="_blank" href="http://www.prognoztech.com/placements.html">Placement</a>
+      <a target="_blank" href="http://www.prognoztech.com/contactus.html">Contact Us</a>
+    </nav>
+  </header>
+  <div class="child_img">
+    <figure>
+      <img id="html5_welcome" src="https://www.graycelltech.com/wp-content/uploads/2015/06/GCT-HTML5.jpg" alt="HTML5_welcome">
+      <figcaption><h3>HTML 5 is the evolution of the web.So let’s discuss about HTML 5.</h3></figcaption>
+    </figure>
+  </div>
+  <hr>
+  <!-- contents row1 -->
+  <div class="content_frame">
+    <div class="data_left">
+      <h3>Paragraph in HTML 5</h3>
+      <ul>
+        <li><xmp><p>-Paragraph</xmp></li>
+          <li><xmp><details>-Details</xmp></li>
+            <li><xmp><summary>-Summary</xmp></li>
+            </ul>
+            <hr>
+            <details title="Click here" open>
+              <summary>Html Details</summary>
+              <p><xmp>This is how the <details> and <summary> works.</xmp></p>
+              </details>
+            </div>
+            <div class="data_right">
+              <h3>Layout in HTML5</h3>
+              <ul>
+                <!-- <p><xmp> as < </xmp></p> as > -->
+                <li><xmp><div></div>-Defines a division or section in a document</xmp></li>
+                <li><xmp><span></span>-Grouping and applying styles to elements</xmp></li>
+              </ul>
+              <p>This Paragraph contains <span id="red">Red</span> and <span id="yellow">Yellow</span> colors</p>
+            </div>
+          </div>
+          <!-- contents row2 -->
+          <div class="content_frame1">
+            <div class="data_left1">
+              <h3>Multimedia Components - Audio</h3>
+              <ul>
+                <li><xmp><audio>-Audio used to embed audio files in a document</xmp></li>
+                </ul>
+                <hr>
+                <audio controls type="audio/mpeg" src="../Source_/media/photo_sonic_slomo.mp3"></audio>
+              </div>
+              <div class="data_right1">
+                <h3>Multimedia Components - Video</h3>
+                <ul>
+                  <li><xmp><video>-Video used to embed video files in a document</xmp></li>
+                  </ul>
+                  <video width="420px" height="260px" src="../Source_/media/HD-Super.mp4" type="video/mp4" controls poster="../Source_/image/bbc_poster.jpg">
+                  </video>
+                </div>
+              </div>
+
+              <!-- content row3 -->
+              <div class="content_frame2">
+                <div class="data_left2">
+                  <h3>Measuring Data - Meter </h3>
+                  <ul>
+                    <li><xmp><meter>-Meter element to measure data within given range</xmp></li>
+                    </ul>
+                    <hr><span>
+                      <meter value="70" min="0" max="100"></meter> &nbsp;70%
+                    </span>
+                  </div>
+                  <div class="data_right2">
+                    <h3>Measuring Data - Progress Bar </h3>
+                    <ul>
+                      <li><xmp><progress>-Progress tag represents the progress of a task.</xmp></li>
+                      </ul>
+                      <hr><span>
+                        <progress value="70" max="100"></progress> &nbsp;70%
+                      </span>
+                    </div>
+                  </div>
+                  <!-- content row4 -->
+                  <div class="content_frame3">
+                    <div class="data_left3">
+                      <h3>HTML Layout Elements (New Semantic Elements in HTML5) </h3>
+                      <img id="layout_img" src="../Source_/image/semantic_tags.jpg" alt="Semantic_tags">
+                    </div>
+                    <div class="data_right3">
+                      <h3 title="Semantics is the study of the meanings of words and phrases in language">Semantic Elements?</h3>
+                      <p><mark>Semantic elements are elements with a meaning and clearly describes its meaning to both the browser and the developer.</mark></p>
+                      <ul>
+                        <li><p>Semantic elements: <xmp><form>, <table>, <img> and etc. - Clearly defines its content.</xmp></p></li>
+                          <li><p>Non-semantic elements: <xmp><div></div>, <span> and etc. - Tells nothing about its content.</xmp></p></li>
+                          </ul>
+
+                        </div>
+                      </div>
+
+                      <!-- content row5 -->
+                      <div class="content_frame4">
+                        <div class="data_left4">
+                          <h4>HTML5-New semantic elements to define different parts of a web page:</h4>
+                          <ul>
+                            <li><p><xmp><header> - Specifies a header for a document or section.</xmp></p></li>
+                              <li><p><xmp><nav> - Defines a set of navigation links.</xmp></p></li>
+                                <li><p><xmp><section> - Element defines a section in a document.</xmp></p></li>
+                                  <li><p><xmp><article> -  Element specifies independent/self-contained content.</xmp></p></li>
+                                    <li><p><xmp><aside> - Content which is related to the surrounding content.</xmp></p></li>
+                                      <li><p><xmp><footer> - Element specifies a footer for a document or section.</xmp></p></li>
+                                        <li><p><xmp><figure> - Element to mark up a photo in a document.</xmp></p></li>
+                                          <li><p><xmp><figcaption> - Specifies caption to an image, grouped in <figure></xmp></p></li>
+                                            <li><p><xmp><details> -Defines additional details that user can view or hide</xmp></p></li>
+                                              <li><p><xmp><summary> -Defines a visible heading for a <details> element</xmp></p></li>
+                                                <li><p><xmp><main> - Specifies the main content of a document</xmp></p></li>
+                                                  <li><p><xmp><mark> - Defines marked/highlighted text</xmp></p></li>
+                                                    <li><p><xmp><time> - Defines a human-readable date/time.</xmp></p></li>
+                                                      <li><p><xmp><hgroup> - Grouping titles with their associated subtitles</xmp></p></li>
+                                                      </ul>
+                                                    </div>
+                                                    <!-- <div class="data_right4">
+
+
+                                                  </div> -->
+                                                </div>
+                                                <br>
+                                                <footer>
+                                                  <div class="footer_bind">
+                                                    <p id="footer_text">&copy;&nbsp;Copyright 2018 Prognoz Technologies Pvt. Ltd. All Rights Reserved.*</p>
+                                                  </div>
+                                                </footer>
+                                              </body>
+                                              </html>

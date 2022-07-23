@@ -1,0 +1,28 @@
+extends index.pug
+
+block content
+    // let status = "Products in your Cart"  compulsory to use ""
+    p.text-success.font-weight-bold #{status}
+    table.table.table-striped
+        thead 
+            tr
+                th(scope='col') S.NO
+                th(scope='col') Product
+                th(scope='col') Unit Cost
+                th(scope='col') Date
+        tbody
+        - let j=1
+        each i in data
+        
+            tr
+                th(scope='row') #{j}
+                td  #{i.br_name+' '+i.prd_name}
+                td  &#x20B9;#{i.unit_cost}
+                td  #{new Date(i.date)} 
+            -j++
+
+
+
+    
+
+

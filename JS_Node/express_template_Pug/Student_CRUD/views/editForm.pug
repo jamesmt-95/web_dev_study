@@ -1,0 +1,42 @@
+//extends index.pug
+
+block editMenu
+    .col-md-12.card.mb-4#editForm
+        .pt-3.pb-3.col-md-12.col-xs-12.row
+            .col-md-6.col-xs-12
+                label(for='input1') Employee Name
+                input#input1.form-control(type='text', value= e_name)
+            .col-md-6.col-xs-12
+                label(for='input2') Sex
+                input#input2.form-control(type='text', value= e_sex)
+        .pt-3.pb-3.col-md-12.col-xs-12.row
+            .col-md-6.col-xs-12
+                label(for='input3') Age
+                input#input3.form-control(type='text', value= e_age)
+            .col-md-6.col-xs-12
+                label(for='input4') Designation
+                input#input4.form-control(type='text', value= e_desg)
+        .col-md-12.col-xs-12.pb-3
+            small(id='formstatus', class='font-weight-bold')
+        .col-md-12.col-xs-12.mb-2
+            .btn-group
+                button.mt-2.btn.btn-outline-primary.mx-2(disabled='',data-id= e_no)#submit Save
+                button.mt-2.btn.btn-outline-primary(data-id= e_no, data-target='#delete_modal', data-toggle='modal')#delete Delete
+        
+
+    #delete_modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5#exampleModalLongTitle.modal-title Confirm??
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body
+                    p You want to delete the Employee?
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                    button.btn.btn-primary(type='button')#cnfrm_delete Yes
+                small.mb-2.mx-2.mr-3.text-danger.text-right#modal_delete_status 
+
+
+            

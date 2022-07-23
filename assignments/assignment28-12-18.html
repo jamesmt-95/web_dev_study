@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Prognoz | Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="public/bootstrap-4.0.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+  /* internal{inline} styles for asssignment */
+  @keyframes test {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:50px; top:0px;}
+    50%  {background-color:blue; left:50px; top:50px;}
+    75%  {background-color:green; left:-50px; top:50px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  @keyframes rotation {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+    }
+  }
+  .animated_Div{
+    animation: test 10s 2s;
+    /* animation-duration: 10s;
+    animation-delay: 2s; */
+  }
+
+  .transform_Div {
+    animation: rotation 2s infinite linear;
+  }
+  
+.work_table table,th,td{
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+  
+  <div class="container">
+    <p class="display-4">Food Delivery</p>
+    <div class="row">
+
+      <div style="border:2px solid black; background-color:bisque;" class="w-50 my-4 text-center mx-auto">
+        <p style="color:red;font-size: 20px;"> Order Food Online</p>
+
+        <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td scope="row">Name</td>
+          <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+          <td scope="row">Date</td>
+          <td><input type="date" class="form-control"></td>
+        </tr>
+        <tr>
+          <td scope="row">EMail</td>
+          <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+          <td scope="row">Contact Number</td>
+          <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+          <td scope="row">Contact Number</td>
+          <td><input type="text" class="form-control"></td>
+        </tr>
+        <tr>
+          <td scope="row">Select Food Type</td>
+          <td><input type="radio" name="food_type" >&nbsp;Veg&nbsp;
+            <input type="radio" name="food_type" >&nbsp;Non-Veg
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">Select Restaurant</td>
+          <td>
+            <select class="restaurant form-control" name="get_Restaurant">
+              <option value="selectNone" disabled selected>Select Restaurant</option>
+              <optgroup label="Vashi">
+                <option value="1V">Ahmed Bhai Non Veg</option>
+                <option value="1V">Sea View Non Veg</option>
+              </optgroup>
+              <optgroup label="Nerul">
+                <option value="1V">Ahmed Bhai Non Veg</option>
+                <option value="1V">Sea View Non Veg</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">Drinks</td>
+          <td>
+            <select class="drinks form-control" name="get_drink">
+              <option value="selectNone" disabled selected>Select Drink</option>
+              <optgroup label="Alcoholic">
+                <option value="1V">Beer</option>
+                <option value="1V">Wine</option>
+              </optgroup>
+              <optgroup label="Non Alcoholic">
+                <option value="1V">Soft drinks</option>
+                <option value="1V">Juices</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">Soups</td>
+          <td>
+            <select class="drinks form-control" name="get_drink">
+              <option value="selectNone" disabled selected>Select Soups</option>
+              <optgroup label="Veg">
+                <option value="1V">Mushroom</option>
+                <option value="1V">Mixed Veg</option>
+              </optgroup>
+              <optgroup label="Non Veg">
+                <option value="1V">Chicken</option>
+                <option value="1V">Mutton</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">Dishes</td>
+          <td>
+            <select class="drinks form-control" name="get_drink">
+              <option value="selectNone" disabled selected>Select Dishes</option>
+              <optgroup label="Veg">
+                <option value="1V">North India</option>
+                <option value="1V">South India</option>
+              </optgroup>
+              <optgroup label="Non Veg">
+                <option value="1V">North India</option>
+                <option value="1V">South India</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">Delivery Type</td>
+          <td><input type="radio" name="food_type" >&nbsp;Home Delivery&nbsp;
+            <input type="radio" name="food_type" >&nbsp;Take Away
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">Address</td>
+          <td><textarea class="form-control" placeholder="Address"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="reset" name="food_type" ></td>
+          <td><input type="submit" name="food_type" ></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="row text-center work_table">
+  <table>
+    <caption>Table with Colspan-Top</caption>
+    <tr>
+      <td colspan="4">Student Registeration List</td>
+    </tr>
+    <tr>
+      <th>S.ID</th>
+      <th>Student Name</th>
+      <th>Gender</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>Steve</td>
+      <td>Male</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>Tom</td>
+      <td>Male</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>107</td>
+      <td>Merlin</td>
+      <td>Female</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>109</td>
+      <td>Stephy</td>
+      <td>Female</td>
+      <td>19</td>
+    </tr>
+  </table>
+</div>
+
+<div class="row text-center work_table">
+  <table>
+    <caption>Table with Rowspan-Left</caption>
+    <tr>
+      <td rowspan="6">Student Registeration List</td>
+    </tr>
+    <tr>
+      <th>S.ID</th>
+      <th>Student Name</th>
+      <th>Gender</th>
+      <th>Age</th>
+    </tr>
+
+    <tr>
+      <td>101</td>
+      <td>Steve</td>
+      <td>Male</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>Tom</td>
+      <td>Male</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>107</td>
+      <td>Merlin</td>
+      <td>Female</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>109</td>
+      <td>Stephy</td>
+      <td>Female</td>
+      <td>19</td>
+    </tr>
+  </table>
+</div>
+
+<div class="row text-center work_table">
+  <table>
+    <caption>Table with Colspan-Top-Bottom</caption>
+    <tr>
+      <td colspan="4">Student Registeration List</td>
+    </tr>
+    <tr>
+      <th>S.ID</th>
+      <th>Student Name</th>
+      <th>Gender</th>
+      <th>Age</th>
+    </tr>
+
+    <tr>
+      <td>101</td>
+      <td>Steve</td>
+      <td>Male</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>Tom</td>
+      <td>Male</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>107</td>
+      <td>Merlin</td>
+      <td>Female</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>109</td>
+      <td>Stephy</td>
+      <td>Female</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td colspan="3">Total No.of Students</td>
+      <td>4</td>
+    </tr>
+  </table>
+</div>
+
+<div class="row text-center">
+  <p class="display-4">CSS Animation- animation:</p>
+  <div class="col-md-12 bg-danger animated_Div">
+    Animation using CSS animation (hover me for CSS Transition)
+  </div>
+</div>
+
+<div class="row text-center">
+  <p class="display-4">CSS Animation- transform:</p>
+  <div class="col-md-12 bg-danger transform_Div">
+    Animation using CSS animation
+  </div>
+</div>
+</div>
+</body>
+<!-- <script src="public/jquery3.3.1/jquery-3.3.1.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="public/bootstrap-4.0.0/js/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script> -->
+</html>

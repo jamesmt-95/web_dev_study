@@ -1,0 +1,38 @@
+/* mobile phones - xs <768  smartphones tablets - sm >=768 <992 laptop - md >=992 <1200  large desktop >=1200 */
+
+ @media (max-width: 767px) {
+   #logo{
+     width:100%;
+   }
+  #menu{
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #logo{
+    width: auto;
+  }
+ #menu{
+   width: 50%;
+
+ }
+  }
+
+ @media (min-width: 992px) and (max-width: 1199) {
+    #logo{
+     width: auto;
+   }
+  #menu{
+    /* width: 100%; */
+  }
+ }
+
+ @media (min-width: 1200px) {
+   #logo{
+    width: auto;
+  }
+   #menu{
+     width: 50%;
+   }
+ }
